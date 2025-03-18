@@ -25,9 +25,9 @@
   "clone_dashboard": true,
   "dashboard_id": "ed8492be-265f-4e46-9451-1bb53f66593a",
   "dashboard_name": "textlytics",
-  "dashboard_dataset": "textlytics",
+  "dashboard_dataset": "textlytics_bq",
   "dashboard_datasources": {
-    "ad_group_ad_asset": "ad_group_ad_asset_view",
+    "labeled_ad_group_ad_asset_view": "labeled_ad_group_ad_asset_view",
     "text_assets_performance": "text_assets_performance"
   }
 }

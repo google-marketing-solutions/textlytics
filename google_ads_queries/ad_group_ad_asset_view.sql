@@ -17,9 +17,10 @@ SELECT
     customer.descriptive_name AS customer_name,
     campaign.id AS campaign_id,
     campaign.name AS campaign_name,
-    campaign.status AS campaign_status,
+    campaign.advertising_channel_type As campaign_type,
     campaign.labels AS campaign_label,
-    ad_group.id as ad_group_id,
+    campaign.status AS campaign_status,
+    ad_group.id AS ad_group_id,
     ad_group.name AS ad_group_name,
     ad_group.labels AS ad_group_label,
     ad_group.status AS ad_group_status,
@@ -35,7 +36,10 @@ SELECT
     metrics.clicks AS clicks,
     metrics.conversions AS conversions,
     metrics.ctr AS ctr,
-    metrics.impressions AS impressions
+    metrics.impressions AS impressions,
+    metrics.cost_micros As cost
 FROM ad_group_ad_asset_view
-WHERE segments.date >= '{start_date}'
+WHERE campaign.status = 'ENABLED'
+ AND campaign.advertising_channel_type = 'SEARCH'
+ AND segments.date >= '{start_date}'
  AND segments.date <= '{end_date}'
