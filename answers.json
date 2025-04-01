@@ -28,6 +28,7 @@
   "dashboard_dataset": "textlytics_bq",
   "dashboard_datasources": {
     "labeled_ad_group_ad_asset_view": "labeled_ad_group_ad_asset_view",
-    "text_assets_performance": "text_assets_performance"
+    "text_assets_performance": "text_assets_performance",
+    "ad_group_asset": "ad_group_asset"
   }
 }

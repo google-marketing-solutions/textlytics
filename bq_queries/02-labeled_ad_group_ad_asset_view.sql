@@ -44,5 +44,5 @@ CREATE OR REPLACE TABLE `{bq_dataset}_bq.labeled_ad_group_ad_asset_view` AS (
             FROM `{bq_dataset}_bq.labels_map` AS LM
             WHERE LM.ad_group_ad_label IN UNNEST(A.ad_group_ad_label)
         ) AS ad_group_ad_label_text
-    FROM `{bq_dataset}.ad_group_ad_asset_view` AS A;
+    FROM `{bq_dataset}.ad_group_ad_asset_view` AS A
 )
